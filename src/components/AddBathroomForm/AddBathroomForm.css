@@ -1,7 +1,12 @@
-Background image {
-  
-}
+body {
+  background-image: url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjkw-X_0rfiAhXE5p8KHQgFDn8QjRx6BAgBEAU&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F825566175414664412%2F&psig=AOvVaw0jCi7EtumtG20d87ds2Rjx&ust=1558906636011656");
+ }
 
+form {
+  background-color: bisque;
+  border: 5px;
+  opacity: 80%;
+}
 
 .ReactModal__Overlay {
     -webkit-perspective: 600;
