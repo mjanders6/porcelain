@@ -20,7 +20,6 @@ function NavBar(props) {
                             <AddBR />
                             <FavoriteBR />
                             <OnThePot />
-
                         </Row>
                     </Container>
                 </Nav>

@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <HeaderBar name='Porcelain' />
+      <h1>Test</h1>
       {/* <Mapof LocalArea /> */}
       <NavBar name='Mike' />
     </div>
