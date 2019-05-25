@@ -3,14 +3,14 @@ import React from 'react';
 import './App.css';
 
 import NavBar from './components/NavBar/navbar'
-import HeaderBar from './components/Header/header'
+import HeaderBar from './components/Header/header.js'
 
 
 
 function App() {
   return (
     <div className="App">
-      <HeaderBar name='Porcelain' />
+      <HeaderBar name='Porcelain' /> 
       {/* <Mapof LocalArea /> */}
       <NavBar name='Mike' />
     </div>
