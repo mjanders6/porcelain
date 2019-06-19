@@ -149,7 +149,7 @@ class BRAroundMe extends Component {
     render() {
         return (
             <div>
-                <h5 className="subtitle">When Ya Gotta Go, Ya Gotta Know!</h5>
+                {/* <h5 className="subtitle">When Ya Gotta Go, Ya Gotta Know!</h5> */}
                 <div className="map">
                     <Map handleOnClick={this.handleOnClick}/>
                 </div>
