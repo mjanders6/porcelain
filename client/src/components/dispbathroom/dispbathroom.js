@@ -8,7 +8,7 @@ const Dispbathroom = ({togglebackbtn, bathroom}) =>
         <h4>Restroom Added</h4>
         <Container>
                 <Row>
-                    <Col className="container">
+                    <Col className="container" xs="12" sm="12" md="6" lg="4" xl="4" className="addedbr">
                         {bathroom.map(({street, city, state, zipcode, gender, stalls, level, caption, image, cleanliness}) => (
                             <div>
                                 <Card className="bathroomCard">

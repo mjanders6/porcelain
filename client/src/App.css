@@ -5,40 +5,11 @@
   text-align: center;
   margin-bottom: 10%;
 }
-
+.requestbr {
+  margin-bottom: 5%;
+}
 .subtitle {
   margin-top: 20%;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-  -webkit-animation: App-logo-spin infinite 20s linear;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 img {
   width: 170px;
@@ -51,9 +22,6 @@ img {
 }
 .buttonicons2 {
   margin-top: 18%
-}
-.container1 {
-  margin-top: 20%
 }
 .likeicon {
   border: none;
@@ -79,7 +47,6 @@ img {
   width: 95%;
   text-align: left;
   margin-bottom: 1%;
-  /* height: 100px; */
 }
 .commentcontainer {
   height: 110px;
@@ -91,16 +58,6 @@ img {
   font-size: 25px;
   border: none;
   font-weight: bold;
-}
-.card_size {
-  margin: 4% 3% 28% 3%;
-}
-.cardsize {
-  margin: 154% 3% 28% 3%;
-}
-.requestcontainer {
-  margin-top: 20%;
-  margin-bottom: 26%
 }
 .submenu {
   margin-top: 2%;
@@ -152,4 +109,175 @@ img {
 }
 .map {
   margin-top: 5%;
+}
+
+@media only screen and (max-width: 1920px) {
+  .subtitle {
+    margin-top: 8%;
+  }
+  .map {
+    margin-top: 3%;
+  }
+  .buttonicons2 {
+    margin-top: 5%
+  }
+  .profileimg {
+    width: 250px;
+    height: 250px;
+    margin-top: 136px;
+  }
+  .icons {
+    font-size: 55px;
+  }
+  .headericon, .buttonicons, .buttonicons2 {
+    font-size: 35px !important;
+  }
+  .container1 {
+    margin-top: 6%;
+  }
+  .selectedbr{
+    margin: auto
+  }
+  .braroundrestroom {
+    margin-top: 37%;
+  }
+  .login {
+    display: block;
+    width: 144px;
+    height: 53px;
+    margin: auto;
+    margin-top: 2%;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1472px) {
+  .profileimg {
+    width: 200px;
+    height: 200px;
+  }
+  .username, .icons {
+    font-size: 45px !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #br {
+    margin-top: 9%;
+  }
+  .username, .icons {
+    font-size: 35px !important;
+  }
+  .profileimg {
+    width: 180px;
+    height: 180px;
+  }
+  .picture {
+    font-size: 20px;
+  }
+  .headericon, .buttonicons, .buttonicons2 {
+    font-size: 30px !important;
+  }
+  .login {
+    width: 140px;
+    height: 45px;
+  }
+}
+@media screen and (max-width: 1024px) , screen and (max-height: 1366px) {
+  .logo {
+    width: 60% !important;
+  }
+  .subtitle {
+    margin-top: 10% !important;
+  }
+  #br {
+    margin-top: 43%;
+  }
+  .buttonicons2, .buttonicons {
+    margin-top: 12% !important;
+  }
+  .buttonicons {
+    margin-top: 10% !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .loginlogo {
+    width: 65vw
+  }
+  .login {
+    width: 134px;
+    height: 36px;
+  }
+  .logo {
+    width: 85% !important;
+  }
+  .subtitle {
+    margin-top: 16% !important;
+  }
+  #br {
+    margin-top: 70% !important;
+  } 
+  .braroundrestroom {
+    margin-bottom: 22% !important;
+  }
+  .locationicon {
+    padding: 0 0 0 80%;
+  }
+  .profileimg {
+    width: 130px;
+    height: 130px;
+    margin-top: 95px
+  }
+  .profileinfo {
+    padding: 0;
+  }
+  .username {
+    font-size: 29px !important;
+  }
+  .col-7 {
+    padding: 0 !important;
+  }
+  .buttonicons2, .buttonicons {
+    font-size: 25px !important;
+  }
+  .selectedbr, .addedbr{
+    margin-bottom: 30% !important;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .profileimg {
+    width: 115px;
+    height: 115px;
+    margin-top: 70px
+  }
+  .username {
+    margin-top: 155px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .profileimg {
+    width: 100px;
+    height: 100px;
+    margin-top: 55px;
+  }
+  .picture {
+    font-size: 18px;
+  }
+  .username {
+    font-size: 23px !important;
+    margin-top: 139px;
+  }
+  .icons {
+    font-size: 32px !important;
+  }
+  .buttonicons2, .buttonicons {
+    font-size: 20px !important;
+  }
+  #br {
+    margin-top: 95% !important;
+  }
+  .locationicon {
+    padding: 0px 0 0 75%;
+  }
+  .logo {
+    width: 100% !important;
+  }
 }

@@ -44,8 +44,8 @@ class ProfileLikes extends React.Component {
             <div>
                 <Container>
                     <Row>
-                        <Col className="container">
-                            {this.state.likedbr.map(item => (
+                        {this.state.likedbr.map(item => (
+                            <Col className="container" xs="12" sm="6" md="6" lg="4" xl="3">
                                 <div>
                                     <Card id={item.id} className="bathroomCard" onClick={this.handlebathroomId}>
                                         <CardImg className="cardimg" top width="50%" src={item.image} alt="Card image cap" className="img-fluid" />
@@ -54,8 +54,8 @@ class ProfileLikes extends React.Component {
                                         </CardBody>
                                     </Card>
                                 </div>
-                            ))}
-                        </Col>
+                            </Col>
+                        ))}
                     </Row>
                 </Container>
             </div>

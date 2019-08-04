@@ -1,11 +1,16 @@
 import React from 'react'
 import { IoIosHeart, IoIosHeartEmpty } from "react-icons/io"
-import { Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap'
+import { Card, CardImg, CardBody, CardTitle, CardText, Container, Row, Col } from 'reactstrap'
 
 const Bathroomform = ({ isliked, bathroom, handleLikebutton, likecount, newcomment, handleInputChange, handleSubmit, handledelete, comments}) => {
     const loggedInUser = parseInt(localStorage.getItem('userId'))
-    return <div>
+    return (
+    <div>
+        <Container>
+<Row>
+
     {bathroom.map(({location, image, gender, stalls, level, cleanliness, caption}) => (
+        <Col xs="12" sm="12" md="6" lg="4" xl="4" className="selectedbr" id="br">
         <Card className="card_size cardsize">
             <CardImg className="cardimg" src={image}/>
             <CardBody>
@@ -21,13 +26,13 @@ const Bathroomform = ({ isliked, bathroom, handleLikebutton, likecount, newcomme
                 <div className="commentcontainer">
                     {comments.sort(function(a, b){
                         var keyA = new Date(a.createdAt),
-                            keyB = new Date(b.createdAt)
+                        keyB = new Date(b.createdAt)
                         if(keyA < keyB) return -1
                         if(keyA > keyB) return 1
                         return 0;
-                        }).map(({username, comment, userId, id}) => {
-                            return (
-                                <div className="comment">
+                    }).map(({username, comment, userId, id}) => {
+                        return (
+                            <div className="comment">
                                     <span className="commentname">{username}: </span>
                                     <span>{comment}</span>
                                 { loggedInUser === userId ? <button id={id} value={id} onClick={handledelete} className="deleteicon">x</button> : null }
@@ -45,6 +50,7 @@ const Bathroomform = ({ isliked, bathroom, handleLikebutton, likecount, newcomme
                 </CardText> 
             </CardBody>
         </Card>
+</Col>
 
 
 
@@ -54,9 +60,12 @@ const Bathroomform = ({ isliked, bathroom, handleLikebutton, likecount, newcomme
 
 
 
-        // <!-- dont touch here -->
-                ))}
+// <!-- dont touch here -->
+))}
+</Row>
+</Container>
             </div>
+    )
 }
 
 export default Bathroomform;

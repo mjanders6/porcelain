@@ -12,6 +12,11 @@
     margin: auto;
     padding: 0;
 }
-.logo {
-    width: 130%;
-}
+/* .logo {
+    width: 40% !important;
+} */
+/* @media only screen and (max-width: 1920px) {
+    .logo {
+        width: 40% !important;
+    }
+} */

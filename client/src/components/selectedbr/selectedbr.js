@@ -4,7 +4,7 @@ import Comments from '../../utils/comment'
 import User from '../../utils/user'
 import Likes from '../../utils/likes'
 import { IoIosHeart, IoIosHeartEmpty, IoIosArrowBack } from "react-icons/io"
-import { Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap'
+import { Card, CardImg, CardBody, CardTitle, CardText, Container, Row, Col  } from 'reactstrap'
 
 
 class Selectedbr extends Component {
@@ -137,45 +137,51 @@ class Selectedbr extends Component {
         return (
             <div className="container1">
                 <button onClick={_ => {this.props.toggleredirect()}} className="buttonicons"><IoIosArrowBack /></button>
-                <Card className="card_size">
-                    <CardImg className="cardimg" src={this.state.image} />
-                    <CardBody>
-                        <CardTitle className="Ctitle"> {this.state.location}<br/> {this.state.caption} </CardTitle>
-                        <CardText>  <span>  Cleanliness: {this.state.cleanliness}  &#9679; Stall: {this.state.stalls} &#9679; Level: {this.state.level} <br>
-                        </br> {this.state.gender}
-                        
-                        <div>
-                            {this.state.isliked ? <button onClick={this.handleLikebutton} className="likeicon"><IoIosHeart /></button> : <button onClick={this.handleLikebutton} className="likeicon"><IoIosHeartEmpty /></button>}
-                            {this.state.likecount}
-                        </div>
-                        </span>
-                        <div className="commentcontainer">
-                            {this.state.comments.sort(function(a, b){
-                                var keyA = new Date(a.createdAt),
-                                    keyB = new Date(b.createdAt)
-                                if(keyA < keyB) return -1
-                                if(keyA > keyB) return 1
-                                return 0
-                                }).map(({username, comment, userId, id}) => {
-                                    return (
-                                        <div className="comment">
-                                            <span className="commentname">{username}: </span>
-                                            <span>{comment}</span>
-                                        { parseInt(localStorage.getItem('userId')) === userId ? <button id={id} value={id} onClick={this.handledelete} className="deleteicon">x</button> : null }
-                                        </div>
-                                    )})}
-                        </div>
-                        <div>
-                            <form className="comment-form" id="commentform">
-                                <div className="comment-form-fields">
-                                    <textarea placeholder="Comment" className="commenttext" rows="2" id="newcomment" onChange={this.handleInputChange}></textarea>
-                                    <button type="submit" className="commentsubmit" onClick={this.handleSubmit}>Post</button>
+                <Container>
+                    <Row>
+                        <Col xs="12" sm="12" md="6" lg="4" xl="4" className="selectedbr">
+                        <Card className="card_size">
+                            <CardImg className="cardimg" src={this.state.image} />
+                            <CardBody>
+                                <CardTitle className="Ctitle"> {this.state.location}<br/> {this.state.caption} </CardTitle>
+                                <CardText>  <span>  Cleanliness: {this.state.cleanliness}  &#9679; Stall: {this.state.stalls} &#9679; Level: {this.state.level} <br>
+                                </br> {this.state.gender}
+                                
+                                <div>
+                                    {this.state.isliked ? <button onClick={this.handleLikebutton} className="likeicon"><IoIosHeart /></button> : <button onClick={this.handleLikebutton} className="likeicon"><IoIosHeartEmpty /></button>}
+                                    {this.state.likecount}
                                 </div>
-                            </form>
-                        </div>
-                        </CardText>
-                    </CardBody>
-                </Card>
+                                </span>
+                                <div className="commentcontainer">
+                                    {this.state.comments.sort(function(a, b){
+                                        var keyA = new Date(a.createdAt),
+                                        keyB = new Date(b.createdAt)
+                                        if(keyA < keyB) return -1
+                                        if(keyA > keyB) return 1
+                                        return 0
+                                    }).map(({username, comment, userId, id}) => {
+                                        return (
+                                            <div className="comment">
+                                                    <span className="commentname">{username}: </span>
+                                                    <span>{comment}</span>
+                                                { parseInt(localStorage.getItem('userId')) === userId ? <button id={id} value={id} onClick={this.handledelete} className="deleteicon">x</button> : null }
+                                                </div>
+                                            )})}
+                                </div>
+                                <div>
+                                    <form className="comment-form" id="commentform">
+                                        <div className="comment-form-fields">
+                                            <textarea placeholder="Comment" className="commenttext" rows="2" id="newcomment" onChange={this.handleInputChange}></textarea>
+                                            <button type="submit" className="commentsubmit" onClick={this.handleSubmit}>Post</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                </CardText>
+                            </CardBody>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
             </div>
         )
     }
