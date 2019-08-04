@@ -5,6 +5,7 @@ import Selectedbr from '../../components/selectedbr/selectedbr.js'
 import Image from '../../utils/image.js'
 import './styles.css'
 import { FaCamera } from "react-icons/fa"
+import { Container, Row, Col  } from 'reactstrap'
 
 
 class Profile extends Component {
@@ -61,13 +62,23 @@ class Profile extends Component {
         } else {
             return (
                 <div>
-                    <div>
-                        <h3 className="username">{this.state.username}</h3>
-                        <img src={this.state.userimage} className="profileimg"/>
-                        <button onClick={this.handlechangepicture} className="picture"><FaCamera /></button>
-                    </div>
-                    <input class="file-upload" type="file" accept="image/*" className="profileinput" ref={input => this.inputElement = input} onChange={this.handlepictureinput}/>
-                    <SubMenu toggleredirect={this.toggleredirect}/>                
+                    <Container>
+                        <Row>
+                            <Col xs="7" sm="8" md="8" lg="8" xl="8">
+                                <h3 className="username">{this.state.username}</h3>
+                            </Col>
+                            <Col xs="5" sm="4" md="4" lg="4" xl="4" className="profileinfo">
+                                <img src={this.state.userimage} className="profileimg"/>
+                                <button onClick={this.handlechangepicture} className="picture"><FaCamera /></button>
+                                <input class="file-upload" type="file" accept="image/*" className="profileinput" ref={input => this.inputElement = input} onChange={this.handlepictureinput}/>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <SubMenu toggleredirect={this.toggleredirect}/>                
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
             )
         }

@@ -153,7 +153,7 @@ class BRAroundMe extends Component {
                 <div className="map">
                     <Map handleOnClick={this.handleOnClick}/>
                 </div>
-                <div>
+                <div className='braroundrestroom'>
                     <Bathroomform 
                         bathroom={this.state.bathroom} 
                         comments={this.state.comments} 

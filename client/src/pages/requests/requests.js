@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Request from '../../utils/request'
 import Bathrooms from '../../utils/bathroom'
 import { MdClose, MdCheck } from "react-icons/md"
-import { Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap'
+import { Card, CardImg, CardBody, CardTitle, CardText, Container, Row, Col  } from 'reactstrap'
 
 class Requests extends Component {
     state = {
@@ -69,9 +69,12 @@ class Requests extends Component {
 
     render () {
         return (
-            <div className="requestcontainer"> 
+            <div className="subtitle"> 
                 <h3>Restroom Submission</h3>
+                <Container>
+                <Row>
                 {this.state.requests.map((request, index) => (
+                    <Col className="container" xs="12" sm="6" md="6" lg="4" xl="3" className="requestbr">
                     <Card className="card_size">
                         <CardImg className="cardimg" src={request.image}/>
                         <CardBody>
@@ -86,7 +89,10 @@ class Requests extends Component {
                             </CardText>
                         </CardBody>
                     </Card>
+                    </Col>
                 ))}
+                </Row>
+                </Container>
             </div>
         )
     }

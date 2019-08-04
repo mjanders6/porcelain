@@ -78,8 +78,8 @@ class ProfileComments extends Component {
             <div>
                 <Container>
                     <Row>
-                        <Col className="container">
-                            {this.state.posts.map(item => (
+                        {this.state.posts.map(item => (
+                            <Col className="container" xs="12" sm="6" md="6" lg="4" xl="3">
                                 <div>
                                     <Card id={item.bathroomId} className="bathroomCard" onClick={this.handlebathroomId}>
                                         <CardImg className="cardimg" top width="50%" src={item.image} alt="Card image cap" className="img-fluid" />
@@ -89,8 +89,8 @@ class ProfileComments extends Component {
                                         </CardBody>
                                     </Card>
                                 </div>
-                            ))}
-                        </Col>
+                            </Col>
+                        ))}
                     </Row>
                 </Container>
             </div>
