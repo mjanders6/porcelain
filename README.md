@@ -1,5 +1,6 @@
-<img src = "https://sheltered-cliffs-91931.herokuapp.com/static/media/Porcelain.38f4369f.png" width="150">
+<!-- <img src = "https://sheltered-cliffs-91931.herokuapp.com/static/media/Porcelain.38f4369f.png" width="150"> -->
 
+![alt text](/client/src/assets/Porcelain.png)
 PORCELAIN - When you gotto go, you gotto know!
 ***
 
