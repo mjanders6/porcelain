@@ -1,6 +1,6 @@
 <!-- <img src = "https://sheltered-cliffs-91931.herokuapp.com/static/media/Porcelain.38f4369f.png" width="150"> -->
 
-![alt text](/client/src/assets/Porcelain.png)
+![Home-Screen](/client/src/assets/Porcelain.png)
 PORCELAIN - When you gotto go, you gotto know!
 ***
 
@@ -28,6 +28,19 @@ Porcelain is review app for restrooms. You get a list of restrooms in the locati
  <li> Amazon Web Services (AWS)
 
  </ul>
+
+## Screen Shots
+### Landing Page
+![Landing](/client/src/assets/Landing.png)
+
+### Add a Restroom
+![Add-One](/client/src/assets/Add-BR.png)
+
+### Bathrooms with Comments
+![BR](/client/src/assets/BRs.png)
+
+### Comments Page
+![Comments](/client/src/assets/Comments-Page.png)
 
 ## Deployment:
 
