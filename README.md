@@ -5,7 +5,7 @@ PORCELAIN - When you gotto go, you gotto know!
 Porcelain is review app for restrooms. You get a list of restrooms in the location you are at, you get to pick which Restroom you would like to use for your business...
 
 ## Deployment:
-[Deployment](https://sheltered-cliffs-91931.herokuapp.com/)
+[Deployment](https://sheltered-cliffs-91931.herokuapp.com/) | https://sheltered-cliffs-91931.herokuapp.com
 
 ## App Features:
 <ul>
